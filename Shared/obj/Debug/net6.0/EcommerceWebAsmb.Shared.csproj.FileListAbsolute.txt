@@ -1,0 +1,12 @@
+D:\EcommerceBlazor\EcommerceWebAsmb\Shared\bin\Debug\net6.0\EcommerceWebAsmb.Shared.deps.json
+D:\EcommerceBlazor\EcommerceWebAsmb\Shared\bin\Debug\net6.0\EcommerceWebAsmb.Shared.dll
+D:\EcommerceBlazor\EcommerceWebAsmb\Shared\bin\Debug\net6.0\EcommerceWebAsmb.Shared.pdb
+D:\EcommerceBlazor\EcommerceWebAsmb\Shared\obj\Debug\net6.0\EcommerceWebAsmb.Shared.csproj.AssemblyReference.cache
+D:\EcommerceBlazor\EcommerceWebAsmb\Shared\obj\Debug\net6.0\EcommerceWebAsmb.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\EcommerceBlazor\EcommerceWebAsmb\Shared\obj\Debug\net6.0\EcommerceWebAsmb.Shared.AssemblyInfoInputs.cache
+D:\EcommerceBlazor\EcommerceWebAsmb\Shared\obj\Debug\net6.0\EcommerceWebAsmb.Shared.AssemblyInfo.cs
+D:\EcommerceBlazor\EcommerceWebAsmb\Shared\obj\Debug\net6.0\EcommerceWebAsmb.Shared.csproj.CoreCompileInputs.cache
+D:\EcommerceBlazor\EcommerceWebAsmb\Shared\obj\Debug\net6.0\EcommerceWebAsmb.Shared.dll
+D:\EcommerceBlazor\EcommerceWebAsmb\Shared\obj\Debug\net6.0\refint\EcommerceWebAsmb.Shared.dll
+D:\EcommerceBlazor\EcommerceWebAsmb\Shared\obj\Debug\net6.0\EcommerceWebAsmb.Shared.pdb
+D:\EcommerceBlazor\EcommerceWebAsmb\Shared\obj\Debug\net6.0\ref\EcommerceWebAsmb.Shared.dll

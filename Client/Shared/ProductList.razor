@@ -1,0 +1,24 @@
+﻿@inject HttpClient Http
+
+<h3>ProductList</h3>
+
+<ul class="list-unstyled">
+    @foreach( var product in Products)
+    {
+    <li class="media my-3">
+        <div class="media-image-wrapper mr-2">
+            <img src="@product.ImageUrl" alt="@product.Title"/>
+        </div>
+        <div class="media-body ">
+            <a>
+                <h4 class="mb-0">@product.Title</h4>
+            </a>
+            <p>@product.Descriptions</p>
+            <h5 class="price">
+                $@product.Price
+            </h5>
+        </div>
+    </li>
+    }
+    
+</ul>
