@@ -6,3 +6,8 @@
     gap:5rem;
     align-items:center;
 }
+.list-unstyled>li>div {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    place-items: baseline;
+}
