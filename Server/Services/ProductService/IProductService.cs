@@ -8,5 +8,6 @@ namespace EcommerceWebAsmb.Server.Services.ProductService
     public interface IProductService
     {
         Task<ServiceResponse<List<Product>>> GetServiceResponseAsync();
+        Task<ServiceResponse<Product>> GetProductResponseAsync(int id);
     }
 }
