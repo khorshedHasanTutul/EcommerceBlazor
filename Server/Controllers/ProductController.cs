@@ -21,5 +21,11 @@ namespace EcommerceWebAsmb.Server.Controllers
             var Products = await _productService.GetServiceResponseAsync();
             return Ok(Products);
         }
+        [HttpGet("{id}")]
+        public async Task<ActionResult<ServiceResponse<Product>>> GetProduct(int id)
+        {
+            var Product = await _productService.GetProductResponseAsync(id);
+            return Ok(Product);
+        }
     }
 }
