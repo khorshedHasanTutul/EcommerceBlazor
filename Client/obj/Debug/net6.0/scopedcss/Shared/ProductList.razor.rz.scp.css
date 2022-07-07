@@ -6,3 +6,8 @@ body[b-gsqtjqwlwi] {
     gap:5rem;
     align-items:center;
 }
+.list-unstyled>li>div[b-gsqtjqwlwi] {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    place-items: baseline;
+}

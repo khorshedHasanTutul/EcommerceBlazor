@@ -8,11 +8,7 @@ namespace EcommerceWebAsmb.Client.Shared
         private static List<Product> Products = new List<Product>();
         protected override async Task OnInitializedAsync()
         {
-            var GetProducts = await Http.GetFromJsonAsync<List<Product>>("api/Product");
-            if (GetProducts != null)
-            {
-                Products = GetProducts;
-            }
+            await ProductService.GetProducts();
         }
     }
 }
