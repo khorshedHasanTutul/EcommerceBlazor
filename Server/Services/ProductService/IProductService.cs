@@ -9,5 +9,6 @@ namespace EcommerceWebAsmb.Server.Services.ProductService
     {
         Task<ServiceResponse<List<Product>>> GetServiceResponseAsync();
         Task<ServiceResponse<Product>> GetProductResponseAsync(int id);
+        Task<ServiceResponse<List<Product>>> GetProductsByCategory(string category);
     }
 }

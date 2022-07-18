@@ -8,8 +8,6 @@ namespace EcommerceWebAsmb.Server.Controllers
     public class ProductController : BaseController
     {
         private readonly IProductService _productService;
-        private static List<Product> Products = new List<Product>();
-
         public ProductController(IProductService productService)
         {
             _productService = productService;
@@ -21,11 +19,18 @@ namespace EcommerceWebAsmb.Server.Controllers
             var Products = await _productService.GetServiceResponseAsync();
             return Ok(Products);
         }
+
         [HttpGet("{id}")]
         public async Task<ActionResult<ServiceResponse<Product>>> GetProduct(int id)
         {
             var Product = await _productService.GetProductResponseAsync(id);
             return Ok(Product);
+        }
+        [HttpGet("category/{category}")]
+        public async Task<ActionResult<ServiceResponse<Product>>>GetProductByCategory(string categoryUrl)
+        {
+            var products = await _productService.GetProductsByCategory(categoryUrl);
+            return Ok(products);
         }
     }
 }

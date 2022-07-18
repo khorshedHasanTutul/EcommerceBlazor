@@ -21,6 +21,47 @@ namespace EcommerceWebAsmb.Server.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
+            modelBuilder.Entity("EcommerceWebAsmb.Shared.Category", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Url")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Categories");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "Books",
+                            Url = "/books"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "Megazines",
+                            Url = "/megazines"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Name = "Literals",
+                            Url = "/literals"
+                        });
+                });
+
             modelBuilder.Entity("EcommerceWebAsmb.Shared.Product", b =>
                 {
                     b.Property<int>("Id")
@@ -28,6 +69,9 @@ namespace EcommerceWebAsmb.Server.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("CategoryId")
+                        .HasColumnType("int");
 
                     b.Property<string>("Descriptions")
                         .IsRequired()
@@ -46,12 +90,15 @@ namespace EcommerceWebAsmb.Server.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("CategoryId");
+
                     b.ToTable("Products");
 
                     b.HasData(
                         new
                         {
                             Id = 1,
+                            CategoryId = 1,
                             Descriptions = "This is a good Product",
                             ImageUrl = "https://en.wikipedia.org/wiki/Tree#/media/File:Daintree_Rainforest_4.jpg",
                             Price = 550.25m,
@@ -60,6 +107,7 @@ namespace EcommerceWebAsmb.Server.Migrations
                         new
                         {
                             Id = 2,
+                            CategoryId = 2,
                             Descriptions = "This is a good Product",
                             ImageUrl = "https://en.wikipedia.org/wiki/Tree#/media/File:Daintree_Rainforest_4.jpg",
                             Price = 400.25m,
@@ -68,6 +116,7 @@ namespace EcommerceWebAsmb.Server.Migrations
                         new
                         {
                             Id = 3,
+                            CategoryId = 2,
                             Descriptions = "This is a good Product",
                             ImageUrl = "https://en.wikipedia.org/wiki/Tree#/media/File:Daintree_Rainforest_4.jpg",
                             Price = 400.25m,
@@ -76,11 +125,23 @@ namespace EcommerceWebAsmb.Server.Migrations
                         new
                         {
                             Id = 4,
+                            CategoryId = 1,
                             Descriptions = "This is a good Product",
                             ImageUrl = "https://en.wikipedia.org/wiki/Tree#/media/File:Daintree_Rainforest_4.jpg",
                             Price = 400.25m,
                             Title = "TypeScript"
                         });
+                });
+
+            modelBuilder.Entity("EcommerceWebAsmb.Shared.Product", b =>
+                {
+                    b.HasOne("EcommerceWebAsmb.Shared.Category", "Category")
+                        .WithMany()
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Category");
                 });
 #pragma warning restore 612, 618
         }

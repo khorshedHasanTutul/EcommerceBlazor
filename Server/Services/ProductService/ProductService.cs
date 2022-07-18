@@ -14,6 +14,7 @@ namespace EcommerceWebAsmb.Server.Services.ProductService
         {
             _context = context;
         }
+
         public async Task<ServiceResponse<List<Product>>> GetServiceResponseAsync()
         {
             var response = new ServiceResponse<List<Product>>
@@ -22,6 +23,7 @@ namespace EcommerceWebAsmb.Server.Services.ProductService
             };
             return response;
         }
+
         public async Task<ServiceResponse<Product>> GetProductResponseAsync(int productId)
         {
             var response = new ServiceResponse<Product>();
@@ -35,6 +37,15 @@ namespace EcommerceWebAsmb.Server.Services.ProductService
             {
                 response.Data = product;
             }
+            return response;
+        }
+
+        public async Task<ServiceResponse<List<Product>>> GetProductsByCategory(string categoryUrl)
+        {
+            var response = new ServiceResponse<List<Product>>
+            {
+                Data = await _context.Products.Where(p => p.Category.Url.ToLower().Equals(categoryUrl.ToLower())).ToListAsync()
+            };
             return response;
         }
     }

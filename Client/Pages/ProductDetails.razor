@@ -1,0 +1,41 @@
+﻿@page "/productDetails/{id:int}"
+@inject IProductService ProductService
+
+<h3>Tech Details</h3>
+
+@if(product==null){
+    <p>Sorry no product found</p>
+}
+else
+{
+    <div class="ProductDetails-container" >
+    <div class="media-image-wrapper mr-2">
+        <img src="@product.ImageUrl" alt="@product.Title" />
+    </div>
+    <div class="media-body ">
+        <a>
+            <h4 class="mb-0">@product.Title</h4>
+        </a>
+        <p>@product.Descriptions</p>
+        <h5 class="price">
+            $@product.Price
+        </h5>
+    </div>
+</div>
+}
+
+
+@code {
+    private Product ?product = null;
+    [Parameter]
+    public int Id { get; set; }
+
+    protected async override Task OnParametersSetAsync()
+    {
+        var response =await ProductService.GetProduct(Id);
+        //product = ProductService.Products.Find(product => product.Id == Id);
+        if(response.status==true){
+            product = response.Data;
+        }
+    }
+}
