@@ -1,0 +1,10 @@
+﻿body {
+}
+.media-image-wrapper.mr-2 {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.media-image-wrapper.mr-2 img {
+    width:100%;
+}

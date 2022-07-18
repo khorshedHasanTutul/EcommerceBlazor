@@ -11,3 +11,10 @@
     grid-template-columns: 200px 1fr;
     place-items: baseline;
 }
+.media-image-wrapper.mr-2 img {
+    width: 100%;
+    object-fit: contain;
+}
+.media-image-wrapper.mr-2 {
+    width:200px;
+}

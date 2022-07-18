@@ -822,3 +822,4 @@ D:\EcommerceBlazor\EcommerceWebAsmb\Client\obj\Debug\net6.0\build-gz\32xnYrnX.gz
 D:\EcommerceBlazor\EcommerceWebAsmb\Client\obj\Debug\net6.0\build-gz\SOC0W4di.gz
 D:\EcommerceBlazor\EcommerceWebAsmb\Client\obj\Debug\net6.0\build-gz\LsiuON01.gz
 D:\EcommerceBlazor\EcommerceWebAsmb\Client\obj\Debug\net6.0\build-gz\VyEAz7jf.gz
+D:\EcommerceBlazor\EcommerceWebAsmb\Client\obj\Debug\net6.0\scopedcss\Pages\ProductDetails.razor.rz.scp.css

@@ -13,10 +13,13 @@ else
         {
             <li class="media my-3">
                 <div class="media-image-wrapper mr-2">
-                    <img src="@product.ImageUrl" alt="@product.Title" />
+                    <a href="/productDetails/@product.Id">
+                        <img src="@product.ImageUrl" alt="@product.Title" />
+                    </a>
+                   
                 </div>
                 <div class="media-body ">
-                    <a>
+                    <a href="/productDetails/@product.Id">
                         <h4 class="mb-0">@product.Title</h4>
                     </a>
                     <p>@product.Descriptions</p>
