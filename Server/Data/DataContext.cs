@@ -78,6 +78,7 @@ namespace EcommerceWebAsmb.Server.Data
 
         public  DbSet<Product>Products { get; set; }
         public DbSet <Category> Categories { get; set; }
+        public DbSet<User> User { get; set; }
 
     }
 }
