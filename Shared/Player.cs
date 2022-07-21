@@ -8,7 +8,7 @@ namespace EcommerceWebAsmb.Shared
 {
     public class Player
     {
-        public string UserName { get; set; }
-        public int JerseyNumber { get; set; }
+        public string UserName { get; set; } = string.Empty;
+        public int Jerseynumber { get; set; }
     }
 }

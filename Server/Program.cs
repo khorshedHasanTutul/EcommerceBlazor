@@ -23,7 +23,7 @@ builder.Services.AddRazorPages();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddMemoryCache();
-builder.Services.AddSingleton<IcacheService, CacheService>();
+/*builder.Services.AddSingleton<IcacheService, CacheService>();*/
 
 var app = builder.Build();
 app.UseSwaggerUI();
