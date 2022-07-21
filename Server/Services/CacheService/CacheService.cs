@@ -31,8 +31,8 @@ namespace EcommerceWebAsmb.Server.Services.CacheService
             {
                 players = new Player[]
                 {
-                    new Player {UserName = "Messi", JerseyNumber= 10},
-                     new Player {UserName = "Ronaldo", JerseyNumber = 7}
+                    new Player {UserName = "Messi", Jerseynumber= 10},
+                     new Player {UserName = "Ronaldo", Jerseynumber = 7}
                 };
                 AddCachePlayers(players);
             }

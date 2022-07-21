@@ -15,6 +15,14 @@ namespace EcommerceWebAsmb.Server.Services.AuthService
 
         public async Task<ServiceResponse<int>> Register(User user, string password)
         {
+            if(user is null)
+            {
+                return new ServiceResponse<int>
+                {
+                    status = false,
+                    message = "Please provide email & password"
+                };
+            }
             if(await UserExits(user.Email))
             {
                 return new ServiceResponse<int>
